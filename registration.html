@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+	<title>СУЗ Aquarius</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/common.css"> 
+	<link rel="stylesheet" type="text/css" href="css/reg.css">
+	<!-- <link rel="stylesheet" type="text/css" href=""> -->
+	<!-- Enabling HTML5 support for Internet Explorer -->
+  <!--[if lt IE 9]>
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+</head>
+
+<body>
+<header>
+	<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>
+</header>
+<nav>
+	<iframe class="menuif" src="nav.html" scrolling="no"></iframe>
+</nav>
+<section class="bodysec">
+	<article>
+		<h1>Регистрация</h1>
+		<form class="regform" id="regform" method="POST" action="reguser.php">
+			<label for="login_name">Имя пользователя: </label><br>
+			<input type="text" accesskey="1" lang="ru" name="login_name" id="login_name" class="login_name" tabindex="1">
+			<br>
+			<label for="login_email">E-mail: </label><br>
+			<input type="text" lang="ru" name="login_email" id="login_email" class="login_email" tabindex="2">
+			<br>
+			<label for="login_pw">Пароль: </label><br>
+			<input type="password" lang="ru" name="login_pw" id="login_pw" class="login_pw" tabindex="3">
+			<br>
+			<label for="login_rpw">Подтверждение пароля:</label><br>
+			<input type="password" lang="ru" name="login_cpw" id="login_cpw" class="login_cpw" tabindex="4">
+			<br>
+			<input type="submit" tabindex="5" value="Регистрация" name="reg_btn" id="reg_btn" class="reg_btn">
+		</form>
+	</article>
+</section>
+
+<footer>
+<iframe class="footerif" src="footer.html" scrolling="no"></iframe>
+</footer>
+</body>
+</html>

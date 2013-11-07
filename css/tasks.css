@@ -1,0 +1,14 @@
+
+.tasks {
+	width: 100%;
+	display: table;
+		margin-top: 4px;
+	padding: 1px;
+	border: 1px dotted rgba(91,96,247,1);	
+}	
+.tasks tr {
+	border: 0.5px dotted rgba(91,96,247,1);	
+}
+.tasks td {
+	border: 0px;
+}
