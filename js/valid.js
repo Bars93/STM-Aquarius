@@ -3,7 +3,7 @@
 		var el = document.getElementById("login_email");
 		var el_msg = document.getElementById("uemail_err");
 		if(el.value != "") {
-			var regexp = /.@./
+			var regexp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			if (regexp.test(el.value)) {
 				//emlst_elem.src = "img/ok.png";
 				el.style.backgroundImage="url(img/ok.png)";
@@ -27,7 +27,7 @@
 		var els = document.getElementById("login_pw");
 		var el_msg = document.getElementById("upw_err");
 		if(els.value != "") {
-			 var regexp = /(?!^[0-9]*$)(?!^[a-zA-Z!@#$%^&*()_+=<>?]*$)^([a-zA-Z!@#$%^&*()_+=<>?0-9]{6,})$/
+			 var regexp = /(?!^[0-9]*$)(?!^[a-zA-Z!@#$%^&*()_+=<>?]*$)^([a-zA-Z!@#$%^&*()_+=<>?0-9]{6,})$/;
 			 if (regexp.test(els.value)) {
 				els.style.backgroundImage="url(img/ok.png)";
 				el_msg.style.visibility="hidden";
