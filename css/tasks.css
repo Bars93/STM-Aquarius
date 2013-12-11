@@ -1,8 +1,7 @@
-
 .tasks {
 	width: 100%;
 	display: table;
-		margin-top: 4px;
+	margin-top: 4px;
 	padding: 1px;
 	border: 1px dotted rgba(91,96,247,1);	
 }	
@@ -11,4 +10,18 @@
 }
 .tasks td {
 	border: 0px;
+}
+.createtaskbtn {
+	display: inline-block;
+	background-color: rgba(91, 96, 247, 1);
+	border-radius: 10px 10px;
+	min-height: 1.5em;
+	margin-top: 10px;
+	text-decoration: none;	
+	color: rgba(255, 255, 255, 1);
+	width: 40%;
+	margin-right: 10px;
+}
+.createtaskbtn:hover {
+	background-color: rgba(129, 133, 247, 1);
 }

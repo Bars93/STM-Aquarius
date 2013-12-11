@@ -1,0 +1,22 @@
+/* Creator pages, password recovery page & etc small pages */
+.crtaskform {
+	width: 90%;
+	border: 0.5px dotted rgba(91,96,247,1);
+	display: inline-block;
+	text-align: left;
+	padding: 10px;
+}
+.crtaskform label {
+	display: inline-block;
+	margin-bottom: 2px;
+	font-weight: bolder;
+	font-style:normal;
+	float: none;
+	width:100%;
+}
+.crtaskform input[type="text"] {
+	width: 100%;	
+	height: 20px;
+	font-size: 14pt;
+	margin-bottom: 4px;
+}

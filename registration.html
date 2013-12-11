@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
 	<title>СУЗ Aquarius</title>
@@ -18,8 +17,8 @@
     }
   </style>
 <![endif]-->
+	<script type="text/javascript" src="js/valid.js"></script>
 </head>
-
 <body>
 <header>
 	<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>
@@ -33,15 +32,17 @@
 		<form class="regform" id="regform" method="POST" action="reguser.php">
 			<label for="login_name">Имя пользователя: </label><br>
 			<input type="text" accesskey="1" lang="ru" name="login_name" id="login_name" class="login_name" tabindex="1">
-			<br>
+			<div id="uname_err" class="error">bla-bla</div>
 			<label for="login_email">E-mail: </label><br>
-			<input type="text" lang="ru" name="login_email" id="login_email" class="login_email" tabindex="2">
+			<input type="text" lang="ru" name="login_email" id="login_email" class="login_email" onkeyup="valid()" tabindex="2" onkeyup="javascript:valid()">
+			<div id="uemail_err" class="error">bla-bla</div>
 			<br>
 			<label for="login_pw">Пароль: </label><br>
-			<input type="password" lang="ru" name="login_pw" id="login_pw" class="login_pw" tabindex="3">
-			<br>
+			<input type="password" lang="ru" name="login_pw" id="login_pw" class="login_pw" onkeyup="valid()" tabindex="3">
+			<div id="upw_err" class="error">bla-bla</div>
 			<label for="login_rpw">Подтверждение пароля:</label><br>
-			<input type="password" lang="ru" name="login_cpw" id="login_cpw" class="login_cpw" tabindex="4">
+			<input type="password" lang="ru" name="login_cpw" id="login_cpw" class="login_cpw" onkeyup="valid()" tabindex="4">
+			<div id="cpw_err" class="error">bla-bla</div>
 			<br>
 			<input type="submit" tabindex="5" value="Регистрация" name="reg_btn" id="reg_btn" class="reg_btn">
 		</form>
