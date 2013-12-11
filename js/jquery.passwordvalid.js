@@ -12,8 +12,11 @@
 					$("#cpw_err").css("visibility","visible");
 					$("#cpw_err").css("height","40px");	
 				}
-			else
+			else {
 				$("#login_cpw").css("background-image","none");
+				$("#cpw_err").css("visibility","hidden");
+				$("#cpw_err").css("height","1px");	
+			}
 		};
 		var event_action = function() {
 			$(this).keyup(function() {

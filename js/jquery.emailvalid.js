@@ -14,8 +14,11 @@
 					$("#uemail_err").css("height","40px");
 				}
 			}
-			else
+			else {
 				$("#login_email").css("background-image","none");
+				$("#uemail_err").css("visibility","hidden")	;
+				$("#uemail_err").css("height","1px");			
+			}
 		};
 		var event_action = function() {
 			$(this).keyup(function() { valid() })
