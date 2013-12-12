@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/etc.css"> 
+	<link rel="stylesheet" type="text/css" href="css/themes/base/jquery-ui.css">
 	<!-- Enabling HTML5 support for Internet Explorer -->
   <!--[if lt IE 9]>
    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,6 +18,9 @@
     }
   </style>
 <![endif]-->
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/ui/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui/jquery.ui.datepicker.js"></script>
 </head>
 
 <body>
@@ -33,8 +37,16 @@
 		<label for="taskname">Название задачи: </label>
 		<input type="text" class="taskname" name="taskname" placeholder="Name of task">
 		<label for="datetask">Сроки задачи: </label>
-		<input type="datetime" class="datetask" name="datetask" placeholder="Date">
+		<input type="date" id="startdatetask" class="datetask" name="startdatetask" placeholder="Start date">
 		</form>
+		<script>
+		<!--
+		$(document).ready(function() {
+		$("#startdatetask").datepicker();
+		
+		});
+		//-->
+		</script>
 	</article>
 </section>
 
