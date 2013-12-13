@@ -18,6 +18,7 @@
   </style>
 <![endif]-->
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
 	<script type="text/javascript" src="js/jquery.nickvalid.js"></script>
 	<script type="text/javascript" src="js/jquery.emailvalid.js"></script>
 	<script type="text/javascript" src="js/jquery.passwordvalid.js"></script>
@@ -33,33 +34,29 @@
 <section class="bodysec">
 	<article>
 		<h1>Регистрация</h1>
-		<script type="text/javascript" src="js/valid.js"></script>
 		<form class="regform" id="regform" method="POST" action="reguser.php">
 			<label for="login_name">Имя пользователя: </label><br>
 			<input type="text" accesskey="1" lang="ru" name="login_name" id="login_name" class="login_name" tabindex="1" onkeyup="valid()">
 			<div id="uname_err" class="error">Ник не должен быть длиннее 25 символов</div>
 			<label for="login_email">E-mail: </label><br>
-			<input type="text" lang="ru" name="login_email" id="login_email" class="login_email" tabindex="2" onkeyup="valid()" onblur="valid()">
+			<input type="text" lang="ru" name="login_email" id="login_email" class="login_email" tabindex="2">
 			<div id="uemail_err" class="error">Введите e-mail правильно, например 'asm@mail.ru'</div>
 			<br>
 			<label for="login_pw">Пароль: </label><br>
-			<input type="password" lang="ru" name="login_pw" id="login_pw" class="login_pw" tabindex="3" onkeyup="valid()">
+			<input type="password" lang="ru" name="login_pw" id="login_pw" class="login_pw" tabindex="3">
 			<div id="upw_err" class="error">Пароль должен содержать не менее 6 символов. В том числе хотя бы одну букву и цифры (или наоборот)</div>
-			<label for="login_rpw">Подтверждение пароля:</label><br>
-			<input type="password" lang="ru" name="login_cpw" id="login_cpw" class="login_cpw" tabindex="4" onblur="valid()" onkeyup="valid()">
-			<div id="cpw_err" class="error">Пароли не совпадают</div>
+			<label for="login_cpw">Подтверждение пароля:</label><br>
+			<input type="password" lang="ru" name="login_cpw" id="login_cpw" class="login_cpw" tabindex="4">
+			<div id="cpw_err" class="error">Пароль и его подтверждение не совпадают</div>
 			<br>
 			<input type="submit" tabindex="5" value="Регистрация" name="reg_btn" id="reg_btn" class="reg_btn">
 		</form>
 		<script type="text/javascript">
 		<!--
-		valid();	
-	/*$(document).ready(function() {
-		$("#login_name").nickvalid();
-		$("#login_email").emailvalid();
-		$("#login_pw").passwordvalid();		
+	$(document).ready(function() {
+		$(this).validate();
 	});
-*/		//-->
+	//-->
 		</script>
 	</article>
 </section>
