@@ -19,8 +19,11 @@
 				return false;
 			}
 		}
-		else
+		else {
 			el.style.backgroundImage="none";
+			el_msg.style.visibility="hidden";
+			el_msg.style.height="1px";
+		}
 		return false;
 	};
 	var v_passw = function() {
@@ -41,9 +44,12 @@
 				return false;
 			}
 		}
-		else
+		else {
 			els.style.backgroundImage="none";
-		
+			el_msg.style.visibility="hidden";
+			el_msg.style.height="1px";
+		}
+		return false;
 	};
 	var v_cpassw = function() {
 		var el = document.getElementById("login_pw");
@@ -63,11 +69,49 @@
 				return false;
 			}
 		}
-		else 
+		else {
 			elr.style.backgroundImage="none";
+			el_msg.style.visibility="hidden";
+			el_msg.style.height="1px";
+		}
 		return false;
 	};
-	v_email();
-	v_passw();
-	v_cpassw();	
+	var v_nick = function() {
+		var el = document.getElementById("login_name");
+		var el_msg = document.getElementById("uname_err");
+		if(el.value != "") {
+			if(el.value.length < 25) {
+				el.style.backgroundImage="url(img/ok.png)";
+				el_msg.style.visibility="hidden";
+				el_msg.style.height="1px";
+				return true;
+			}		
+			else {
+				el.style.backgroundImage="url(img/err.png)";
+				el_msg.style.visibility="visible";
+				el_msg.style.height="40px";
+				return false;
+			}
+		}
+		else { 
+			el.style.backgroundImage="none";
+			el_msg.style.visibility="hidden";
+			el_msg.style.height="1px";
+		}
+		return false;
+	};
+	var check = false;
+	check = v_nick();
+	check = v_email() && check;
+	check = v_passw() && check;
+	check = v_cpassw() && check;
+	var btn_el = document.getElementById("reg_btn");
+	if(!check) {
+		btn_el.onclick=function() {window.alert('Пожалуйста, заполните все поля правильно!');};
+		btn_el.type = "button";
+	}
+	else {
+		btn_el.onclick="";
+		btn_el.type="submit";	
+	}
 }
