@@ -76,3 +76,11 @@ max-height: 20px;
 a img {
 	border: 0px;
 }
+.login_nick {
+    color: white;
+    margin-left: 10px;
+    margin-right: 5px;
+    font-size: 12pt;
+    display: block;
+    float: left;
+}

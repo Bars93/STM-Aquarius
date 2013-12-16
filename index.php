@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php
+require_once 'inc/init.inc';
+?>
 <html lang="ru">
 <head>
 	<title>СУЗ Aquarius</title>
@@ -20,10 +22,20 @@
 
 <body>
 <header>
-	<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>
+	<!--<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>-->
+    <div class="hdr_block">
+    <?php
+        include_once 'header.php';
+    ?>
+    </div>
 </header>
 <nav>
-	<iframe class="menuif" src="nav.html" scrolling="no"	></iframe>
+	<!--<iframe class="menuif" src="nav.html" scrolling="no"	></iframe>-->
+    <div class="nav_block">
+    <?php
+        include_once 'nav.php';
+    ?>
+    </div>
 </nav>
 <section class="bodysec">
 	<article>
@@ -35,7 +47,12 @@
 </section>
 
 <footer>
-<iframe class="footerif" src="footer.html" scrolling="no"></iframe>
+<!--<iframe class="footerif" src="footer.html" scrolling="no"></iframe>-->
+    <div class="footer_block">
+    <?php
+        include_once 'footer.php';
+    ?>
+    </div>
 </footer>
 </body>
 </html>
