@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
 require_once 'inc/init.inc';
-@session_start();
 ?>
 <html lang="ru">
 <head>

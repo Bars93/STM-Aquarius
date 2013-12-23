@@ -1,9 +1,11 @@
 .tasks {
 	width: 100%;
 	display: table;
-	margin-top: 4px;
+	margin-top: 10px;
+    margin-bottom: 10px;
 	padding: 1px;
-	border: 1px dotted rgba(91,96,247,1);	
+	border: 1px dotted rgba(91,96,247,1);
+    float: none;
 }	
 .tasks tr {
 	border: 0.5px dotted rgba(91,96,247,1);	
@@ -24,4 +26,33 @@
 }
 .createtaskbtn:hover {
 	background-color: rgba(129, 133, 247, 1);
+}
+.paging {
+    display: inline-block;
+    width: 100%;
+    list-style-type: none;
+    text-align: right;
+}
+.pages_container {
+    color: white;
+    background-color: rgba(91,96,247,1);
+    margin-right: 3px;
+    float: left;
+    padding: 3px;
+    min-height: 15px;
+    font-size: 10pt;
+    border: 1px solid rgba(100,96,247,1);
+}
+.pages_container:hover, #curpage_container:hover {
+    border-radius: 5px 5px;
+}
+#curpage_container {
+    color: rgba(91,96,247,1);
+    background-color: white;
+    margin-right: 3px;
+    float: left;
+    padding: 3px;
+    min-height: 15px;
+    font-size: 10pt;
+    border: 1px solid rgba(100,96,247,1);
 }

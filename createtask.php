@@ -47,7 +47,7 @@ session_start();
 <section class="bodysec">
 	<article>
 		<h1>Создание задачи:</h1>
-		<form action="createtask.php" method="POST" class="crtaskform">
+		<form action="addtask.php" method="POST" class="crtaskform">
 		<label for="taskname">Название задачи: </label>
 		<input type="text" class="taskname" name="taskname" placeholder="Name of task">
 		<label for="datetask">Сроки задачи: </label>
@@ -57,15 +57,6 @@ session_start();
 		<!--
 		$(document).ready(function() {
 		    $("#startdatetask").datepicker();
-            /*var p = document.getElementById("logblock");
-            var elem = document.getElementsByClassName("login_nick")[0];
-            var btn = document.getElementsByClassName("logbtn")[0];
-            if(elem && btn) {
-                btn.style.width = "60px";
-                p.style.textAlign = "center";
-                p.style.paddingLeft = "10px";
-                p.style.width = ""+(elem.innerHTML.length *1.2 + 100)+"px";
-            }*/
 		});
 		//-->
 		</script>

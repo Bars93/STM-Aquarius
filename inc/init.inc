@@ -1,4 +1,7 @@
 <?php
+$start_time = microtime();
+$time_array = explode(" ",$start_time);
+$start_time = $time_array[1] + $time_array[0];
 require_once 'auth.inc';
 $db_connect = mysqli_connect(DB_HOST,DB_UNAME,DB_PASSW,DEF_DB) or die('MySQL connection error!
  Please, check settings or contact yout admin! Error: ').mysqli_error($db_connect);

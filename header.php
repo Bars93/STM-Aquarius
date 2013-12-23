@@ -32,20 +32,7 @@
 	<div class="helpreg"><a href="registration.php">Регистрация</a>
 	<!--<a href="recovery.php">Напомнить пароль</a>//--></div>';
             } else {
-                echo '<div class="login_nick">'.$_SESSION['user_name'].'</div> <input type="submit" value="Log off" class="logbtn">
-                <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><script type="text/javascript">
-		<!--
-	    $(document).ready(function() {
-           /* var p = document.getElementById("logblock");
-            var elem = document.getElementsByClassName("login_nick")[0];
-            var btn = document.getElementsByClassName("logbtn")[0];
-            if(elem && btn) {
-                btn.style.width = "60px";
-                p.style.width = ""+(elem.innerHTML.length + 100)*1.5+"px";
-            }*/
-	    });
-	    //-->
-		</script>';
+                echo '<div class="login_nick">'.$_SESSION['user_name'].'</div> <input type="submit" value="Log off" class="logbtn">';
                 $_SESSION['action'] = 'logout';
             }
         } else {
