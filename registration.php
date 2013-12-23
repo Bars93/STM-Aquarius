@@ -17,12 +17,12 @@
     }
   </style>
 <![endif]-->
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
-	<script type="text/javascript" src="js/jquery.nickvalid.js"></script>
-	<script type="text/javascript" src="js/jquery.emailvalid.js"></script>
-	<script type="text/javascript" src="js/jquery.passwordvalid.js"></script>
-	<script type="text/javascript" src="js/jquery.typing-0.2.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nickvalid.js"></script>
+    <script type="text/javascript" src="js/jquery.emailvalid.js"></script>
+    <script type="text/javascript" src="js/jquery.passwordvalid.js"></script>
+    <script type="text/javascript" src="js/jquery.typing-0.2.0.min.js"></script>
 </head>
 <body>
 <header>
@@ -33,6 +33,7 @@
         ?>
     </div>
 </header>
+
 <nav>
 	<!--<iframe class="menuif" src="nav.html" scrolling="no"></iframe>-->
     <div class="nav_block">
@@ -47,14 +48,14 @@
         <?php
             if(!(@session_start()))
                 echo 'Error with session working';
-        ?>
-		<form class="regform" id="regform" method="POST" action="reguser.php">
+        if(!@isset($_SESSION['autorised'])) {
+		echo '<form class="regform" id="regform" method="POST" action="reguser.php">
 			<label for="login_name">Имя пользователя: </label><br>
 			<input type="text" accesskey="1" lang="ru" name="login_name" id="login_name" class="login_name" tabindex="1" onkeyup="valid()">
 			<div id="uname_err" class="error">Ник не должен быть длиннее 25 символов</div>
 			<label for="login_email">E-mail: </label><br>
 			<input type="text" lang="ru" name="login_email" id="login_email" class="login_email" tabindex="2">
-			<div id="uemail_err" class="error">Введите e-mail правильно, например 'asm@mail.ru'</div>
+			<div id="uemail_err" class="error">Введите e-mail правильно, например \'asm@mail.ru\'</div>
 			<br>
 			<label for="login_pw">Пароль: </label><br>
 			<input type="password" lang="ru" name="login_pw" id="login_pw" class="login_pw" tabindex="3">
@@ -65,13 +66,19 @@
 			<br>
 			<input type="submit" tabindex="5" value="Регистрация" name="reg_btn" id="reg_btn" class="reg_btn">
 		</form>
+
 		<script type="text/javascript">
 		<!--
 	    $(document).ready(function() {
-		    $(this).validate();
+            $(this).validate();
 	    });
 	    //-->
-		</script>
+		</script>';
+        }
+        else {
+            echo '<div class="postreg">Вы уже зарегистрированны и авторизованны!</div>';
+        }
+        ?>
 	</article>
 </section>
 

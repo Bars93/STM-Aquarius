@@ -5,7 +5,7 @@ $db_connect = mysqli_connect(DB_HOST,DB_UNAME,DB_PASSW,DEF_DB) or die('MySQL con
 if(!$db_connect) {
     echo "Ошибка при подключении MySQL. Возможно база данных aquarius не создана или повреждена.";
 }
-if($res = mysqli_query($db_connect,"SELECT * from `users`")) {
+/*if($res = mysqli_query($db_connect,"SELECT * from `users`")) {
     mysqli_free_result($res);
 }
 else {
@@ -27,5 +27,17 @@ else {
     }
     else {
         @mysqli_free_result($res);
-    }
 }
+}
+if($res = mysqli_query($db_connect,"SELECT * FROM `visit`")) {
+    mysqli_free_result($res);
+}
+else {
+    $res = mysqli_query($db_connect,"CREATE TABLE `visit` (`page_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,`page_file` TEXT(255) NOT NULL,`last_visit` DATETIME NOT NULL, `v_count` INT NOT NULL)");
+    if(!$res) {
+        echo "Error with connecting DB. Error: ".mysqli_error($db_connect);
+    }
+    else {
+        @mysqli_free_result($res);
+    }
+}*/

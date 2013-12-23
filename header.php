@@ -15,25 +15,37 @@
         }
     </style>
     <![endif]-->
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 </head>
 
 <body>
-
-<section id="logblock">
+<section id="authblock">
+    <ul><li id="logblock">
     <div class="rpos">
         <form class="logform" name="logform" action="login.php" target="_parent" method="POST">
         <?php
         include_once 'inc/init.inc';
         if (@session_start()) {
             if (!isset($_SESSION['autorised'])) {
-                echo '<input type="text" accesskey="1" tabindex="1" class="loginp" name="loginp" placeholder="username">
-		<input type="password" class="passinp" tabindex="2" name="passinp" placeholder="password">
-		<input type="submit" class="logbtn" tabindex="3" name="logbtn" value="Вход" >
+                echo '<input type="text" accesskey="1" tabindex="6" class="loginp" name="loginp" placeholder="username">
+		<input type="password" class="passinp" tabindex="7" name="passinp" placeholder="password">
+		<input type="submit" class="logbtn" tabindex="8" name="logbtn" value="Вход" >
 	<div class="helpreg"><a href="registration.php">Регистрация</a>
 	<!--<a href="recovery.php">Напомнить пароль</a>//--></div>';
             } else {
-                echo '<div class="login_nick">'.$_SESSION['user_name'].'</div> <input type="submit" value="log off" class="logbtn">';
+                echo '<div class="login_nick">'.$_SESSION['user_name'].'</div> <input type="submit" value="Log off" class="logbtn">
+                <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><script type="text/javascript">
+		<!--
+	    $(document).ready(function() {
+           /* var p = document.getElementById("logblock");
+            var elem = document.getElementsByClassName("login_nick")[0];
+            var btn = document.getElementsByClassName("logbtn")[0];
+            if(elem && btn) {
+                btn.style.width = "60px";
+                p.style.width = ""+(elem.innerHTML.length + 100)*1.5+"px";
+            }*/
+	    });
+	    //-->
+		</script>';
                 $_SESSION['action'] = 'logout';
             }
         } else {
@@ -42,21 +54,12 @@
         ?>
         </form>
     </div>
+    </li>
+</ul>
 </section>
+
 <a href="/">
     <img src="img/logo.gif" title="Logo" class="logo" id="logo">
 </a>
-<script type="text/javascript">
-    <!--
-        $(document).ready(function() {
-           var p = document.getElementById('logblock');
-            var elem = document.getElementsByClassName('login_nick')[0];
-            if(elem) {
-                var new_w = elem.innerHTML.length + 150;
-                p.style.width = ""+new_w+"px";
-            }
-        });
-        //-->
-</script>
 </body>
 </html>

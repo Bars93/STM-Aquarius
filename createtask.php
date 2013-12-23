@@ -1,3 +1,7 @@
+<?php
+require_once 'inc/init.inc';
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="ru">
@@ -25,10 +29,20 @@
 
 <body>
 <header>
-	<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>
+	<!--<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>-->
+    <div class="hdr_block">
+        <?php
+            include_once 'header.php';
+        ?>
+    </div>
 </header>
 <nav>
-	<iframe class="menuif" src="nav.html" scrolling="no"></iframe>
+	<!--<iframe class="menuif" src="nav.html" scrolling="no"></iframe>-->
+    <div class="nav_block">
+        <?php
+        include_once 'nav.php';
+        ?>
+    </div>
 </nav>
 <section class="bodysec">
 	<article>
@@ -42,8 +56,16 @@
 		<script>
 		<!--
 		$(document).ready(function() {
-		$("#startdatetask").datepicker();
-		
+		    $("#startdatetask").datepicker();
+            /*var p = document.getElementById("logblock");
+            var elem = document.getElementsByClassName("login_nick")[0];
+            var btn = document.getElementsByClassName("logbtn")[0];
+            if(elem && btn) {
+                btn.style.width = "60px";
+                p.style.textAlign = "center";
+                p.style.paddingLeft = "10px";
+                p.style.width = ""+(elem.innerHTML.length *1.2 + 100)+"px";
+            }*/
 		});
 		//-->
 		</script>
@@ -51,7 +73,12 @@
 </section>
 
 <footer>
-<iframe class="footerif" src="footer.html" scrolling="no"></iframe>
+<!--<iframe class="footerif" src="footer.html" scrolling="no"></iframe>-->
+    <div class="footer_block">
+        <?php
+        include_once 'footer.php';
+        ?>
+    </div>
 </footer>
 </body>
 </html>

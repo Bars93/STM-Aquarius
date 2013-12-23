@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/reg.css">
-</head>
-<body>
+
 <?php
 require_once 'inc/init.inc';
 define('DEFAVATAR', 'img/default.png');
@@ -18,16 +13,16 @@ if (session_start() && isset($db_connect)) {
             if(preg_match('/(?!^[0-9]*$)(?!^[a-zA-Z!@#$%^&*()_+=<>?]*$)^([a-zA-Z!@#$%^&*()_+=<>?0-9]{6,})$/',$user_pw)) {
                 if(!strcmp($user_pw,$user_cpw)) {
                     $query = 'SELECT * FROM '.USERSTABLE.' WHERE user_name="'.$user_nick.'"';
-                    $usrs = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($usrs));
+                    $usrs = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($db_connect));
                     $uarr = mysqli_fetch_array($usrs)['user_name'];
                     if(!isset($uarr)) {
                         $pass = md5($user_pw.SALTCONSTANT);
                         $query = 'SELECT COUNT(1) FROM '.USERSTABLE;
-                        $res = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($res));
+                        $res = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($db_connect));
                         $user_count = mysqli_fetch_array($res)[0];
                         echo 'Total count of users: '.$user_count++.'<br>';
                         $query = "INSERT INTO ".USERSTABLE." VALUES(NULL,'$user_nick','$pass','$user_email','".date("Y:m:d H:i:s")."','".DEFAVATAR."')";
-                        $res = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($res));
+                        $res = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($db_connect));
                         $ok = true;
                         $_SESSION['user_id'] = $user_count;
                         $_SESSION['user_name'] = $user_nick;
@@ -60,13 +55,10 @@ if (session_start() && isset($db_connect)) {
     }
 }
 else {
-    echo '<div class="error" style="height: 40px; width: 100%;">Session error</div>';
+    echo 'Session error';
 }
 if(!isset($ok)) {
     echo 'You have submitted incorrect data<br>';
-    echo 'Press <a href="'.$_SERVER['HTTP_REFERER'].'>here</a> to return';
+    echo "Press <a href='".$_SERVER['HTTP_REFERER']."'>here</a> to return";
 }
 mysqli_close($db_connect);
-?>
-</body>
-</html>
