@@ -43,5 +43,34 @@
     overflow: scroll;
 }
 #login_block {
-    width: 60%; !important
+    max-width: 50% !important;
+    min-width: 40% !important;
+}
+#login_block .logform {
+    width: 100%;
+    text-align: center;
+}
+#login_block .logform input[type="text"],#login_block .logform input[type="password"] {
+    float: none !important;
+    margin-bottom: 6px !important;
+    max-width: 90% !important;
+    min-width: 80% !important;
+}
+#login_block .logform input[type="submit"] {
+   min-width: 65% !important;
+    max-width: 80% !important;
+}
+#login_block .logform .helpreg {
+    border: 1px dashed rgba(91,96,247,1);
+    padding: 6px;
+    margin-top: 8px;
+    text-indent: 1.5em;
+    text-align: left;
+    border-radius: 10px;
+    min-height: 30px;
+    width: 80%;
+    display: inline-block;
+}
+#login_block .logform .helpreg a {
+    margin-right: 0px !important;
 }
