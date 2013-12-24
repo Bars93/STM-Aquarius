@@ -21,7 +21,8 @@ if (session_start() && isset($db_connect)) {
                         $res = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($db_connect));
                         $user_count = mysqli_fetch_array($res)[0];
                         echo 'Total count of users: '.$user_count++.'<br>';
-                        $query = "INSERT INTO ".USERSTABLE." VALUES(NULL,'$user_nick','$pass','$user_email','".date("Y:m:d H:i:s")."','".DEFAVATAR."')";
+                        $query = "INSERT INTO ".USERSTABLE." VALUES(NULL,'$user_nick','','$pass','$user_email',NOW(),'".DEFAVATAR."',5)";
+
                         $res = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($db_connect));
                         $ok = true;
                         $_SESSION['user_id'] = $user_count;
@@ -30,8 +31,8 @@ if (session_start() && isset($db_connect)) {
                         $_SESSION['autorised'] = 1;
                         $_SESSION['taskscount'] = 0;
                         unset($_SESSION['incorrect']);
-                        echo 'New user is registered successfully. Autorefresh return you to main page or click <a href="/">here</a> if autorefresh turned off<br>';
-                        echo '<meta http-equiv="refresh" content="3;URL=/">';
+                        echo 'New user is registered successfully. Autorefresh return you to tasks page or click <a href="/tasks.php">here</a> if autorefresh turned off<br>';
+                        echo '<meta http-equiv="refresh" content="3;URL=/tasks.php">';
                     }
                     else {
                         echo 'User with nick '.$user_nick.' has already exist <br>';

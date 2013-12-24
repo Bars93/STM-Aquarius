@@ -1,8 +1,5 @@
 #navblock {
 	display: block;
-/*	position: absolute;
-	top: 0;
-	left: 0;*/
 	padding: 0;
 	max-height: 60px;
 	text-align: center;
@@ -10,7 +7,8 @@
 	overflow: hidden;
 	box-shadow: inset 0px 1px 12px rgba(91,96,247,1);
 	-moz-box-shadow: inset 0px 1px 12px rgba(91,96,247,1);
-	-webkit-box-shadow: inset 0px 1px 12px rgba(91,96,247,1);  
+	-webkit-box-shadow: inset 0px 1px 12px rgba(91,96,247,1);
+    z-index: -1;
 }
 body {
 	background: rgba(255, 255, 255, 1);
@@ -65,7 +63,7 @@ body {
 	height:100%;
 	top:0;
 	left:0;
-	z-index:1;
+	z-index:0;
 	opacity:0;
 
 	/* Gradients! */
@@ -150,7 +148,7 @@ body {
 	padding: 6px 20px 14px;
 	position: relative;
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
-	z-index:2;
+	z-index:1;
 	text-decoration:none !important;
 	white-space:nowrap;
 }

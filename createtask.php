@@ -1,6 +1,6 @@
 <?php
 require_once 'inc/init.inc';
-session_start();
+@session_start();
 ?>
 <!DOCTYPE html>
 
@@ -8,6 +8,11 @@ session_start();
 <head>
 	<title>СУЗ Aquarius</title>
 	<meta charset="utf-8">
+    <?php
+    if(!isset($_SESSION['autorised'])) {
+       echo '<meta http-equiv="refresh" content="0;URL=/logpage.php">';
+    }
+    ?>
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/etc.css"> 
 	<link rel="stylesheet" type="text/css" href="css/themes/base/jquery-ui.css">
@@ -25,11 +30,11 @@ session_start();
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/ui/jquery-ui.js"></script>
 <script type="text/javascript" src="js/ui/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="js/ui/i18n/jquery.ui.datepicker-ru.js"></script>
 </head>
 
 <body>
 <header>
-	<!--<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>-->
     <div class="hdr_block">
         <?php
             include_once 'header.php';
@@ -37,7 +42,6 @@ session_start();
     </div>
 </header>
 <nav>
-	<!--<iframe class="menuif" src="nav.html" scrolling="no"></iframe>-->
     <div class="nav_block">
         <?php
         include_once 'nav.php';
@@ -51,23 +55,30 @@ session_start();
 		<label for="taskname">Название задачи: </label>
 		<input type="text" class="taskname" name="taskname" placeholder="Name of task">
 		<label for="datetask">Сроки задачи: </label>
+            <div id="daterange">
 		<input type="date" id="startdatetask" class="datetask" name="startdatetask" placeholder="Start date">
+        <input type="date" id="enddatetask" class="datetask" name="enddatetask" placeholder="End date">
+            </div>
+            <label for="task_user">Назначение пользователю: </label>
+            <input type="text" class="task_user" id="user" name="task_user" placeholder="User">
+            <label for="task_comm">Комментарий: </label>
+            <textarea type="text" rows="20" name="task_comm" id="task_comm" class="task_comm">Commentaries</textarea><br>
+            <input type="submit" id="createbtn" value="Создать задачу">
 		</form>
 		<script>
 		<!--
 		$(document).ready(function() {
 		    $("#startdatetask").datepicker();
+            $("#enddatetask").datepicker();
 		});
 		//-->
 		</script>
 	</article>
 </section>
-
 <footer>
-<!--<iframe class="footerif" src="footer.html" scrolling="no"></iframe>-->
     <div class="footer_block">
         <?php
-        include_once 'footer.php';
+            include_once 'footer.php';
         ?>
     </div>
 </footer>

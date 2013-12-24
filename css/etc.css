@@ -1,9 +1,9 @@
 /* Creator pages, password recovery page & etc small pages */
 .crtaskform {
-	width: 90%;
+	width: 60%;
 	border: 0.5px dotted rgba(91,96,247,1);
 	display: inline-block;
-	text-align: left;
+	text-align: center;
 	padding: 10px;
 }
 .crtaskform label {
@@ -14,9 +14,34 @@
 	float: none;
 	width:100%;
 }
+#daterange {
+    display: inline-block;
+    width: 80%;
+    text-align: justify
+}
+#daterange .datetask {
+    width: 45%;
+    height: 15px;
+    font-size: 12pt;
+    margin-bottom: 4px;
+}
+#daterange #startdatetask {
+    float: left;
+}
+#daterange #enddatetask {
+    float: right;
+}
 .crtaskform input[type="text"] {
-	width: 100%;	
-	height: 20px;
-	font-size: 14pt;
+	width: 80%;
+	height: 15px;
+	font-size: 12pt;
 	margin-bottom: 4px;
+}
+#task_comm {
+    height: 100px;
+    width: 80%;
+    overflow: scroll;
+}
+#login_block {
+    width: 60%; !important
 }
