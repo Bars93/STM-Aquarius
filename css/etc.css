@@ -14,6 +14,10 @@
 	float: none;
 	width:100%;
 }
+.crtaskform .task_prior {
+    margin-left: 20px;
+    margin-right: 2px;
+}
 #daterange {
     display: inline-block;
     width: 80%;

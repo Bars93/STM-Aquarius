@@ -59,6 +59,17 @@ require_once 'inc/init.inc';
 		<input type="date" id="startdatetask" class="datetask" name="startdatetask" placeholder="Start date">
         <input type="date" id="enddatetask" class="datetask" name="enddatetask" placeholder="End date">
             </div>
+            <label for="task_prior">Приоритет</label>
+            <input type="radio" value="1" name="task_prior" class="task_prior" >1
+            <input type="radio" value="2" name="task_prior" class="task_prior" >2
+            <input type="radio" value="3" name="task_prior" class="task_prior" >3
+            <input type="radio" value="4" name="task_prior" class="task_prior" >4
+            <input type="radio" value="5" name="task_prior" class="task_prior" >5
+            <input type="radio" value="6" name="task_prior" class="task_prior" >6
+            <input type="radio" value="7" name="task_prior" class="task_prior" >7
+            <br>
+            <label for="edit_by_user">Разрешить редактирование пользователем: </label>
+            <input type="checkbox" value="1" name="edit_by_user" class="edit_by_user">
             <label for="task_user">Назначение пользователю: </label>
             <input type="text" class="task_user" id="task_user" name="task_user" placeholder="User">
             <label for="task_comm">Комментарий: </label>
