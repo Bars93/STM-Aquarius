@@ -71,7 +71,8 @@
             if($page - 3 > 1)
                 echo '...';
             for($i = $page - 3; $i <= $page + 3; $i++) {
-                if(($i * $tasks_per_page <= $tasks_count + $tasks_per_page  - 2) && $i > 1) {
+                if(($i < $totalpages) && $i > 1) {
+
                     if($i == $page) {
                         echo '<li><a href="/tasks.php?page='.$i.'"  id="curpage_container">'.$i.'</a></li>';
                     }
@@ -105,7 +106,7 @@
                 echo '<tr><td colspan="5">В настоящее время задач нет</td></tr>';
             }
             else {
-                $query = "SELECT * FROM `tasks` LIMIT $lim_start,$tasks_per_page";
+                $query = "SELECT * FROM `tasks` ORDER BY task_id LIMIT $lim_start,$tasks_per_page";
                 $res = mysqli_query($db_connect,$query) or die('MySQL access error: '.mysqli_error($db_connect));
                 while($resar = mysqli_fetch_assoc($res)) {
                     $query = "SELECT user_id,user_name FROM `users` WHERE user_id='".$resar['author_id']."'";
@@ -120,7 +121,8 @@
                         }
                         echo '<td><a href="settings.php?id='.$resar['author_id'].'">'.mysqli_fetch_array($res_user)['user_name'];
                         echo '</a></td>';
-                        echo '<td>'.$resar['priority'].'</td><td>'.$resar['start_time'].' - '.$resar['end_time'].'</td>';
+                        echo '<td>'.$resar['priority'].'</td><td>'.preg_replace('#(\d{4})-(\d{2})-(\d{2})#','$3.$2.$1',$resar['start_time']);
+                        echo ' - '.preg_replace('#(\d{4})-(\d{2})-(\d{2})#','$3.$2.$1',$resar['end_time']).'</td>';
                         if(mb_strlen($resar['comment']) < 31) {
                             echo '<td>'.$resar['comment'].'</td></tr>';
                         }
@@ -144,7 +146,7 @@
         if($page - 3 > 1)
             echo '...';
         for($i = $page - 3; $i <= $page + 3; $i++) {
-            if(($i * $tasks_per_page <= $tasks_count + $tasks_per_page  - 2) && $i > 1) {
+            if(($i < $totalpages) && $i > 1) {
                 if($i == $page) {
                     echo '<li><a href="/tasks.php?page='.$i.'"  id="curpage_container">'.$i.'</a></li>';
                 }

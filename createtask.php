@@ -60,7 +60,7 @@ require_once 'inc/init.inc';
         <input type="date" id="enddatetask" class="datetask" name="enddatetask" placeholder="End date">
             </div>
             <label for="task_user">Назначение пользователю: </label>
-            <input type="text" class="task_user" id="user" name="task_user" placeholder="User">
+            <input type="text" class="task_user" id="task_user" name="task_user" placeholder="User">
             <label for="task_comm">Комментарий: </label>
             <textarea type="text" rows="20" name="task_comm" id="task_comm" class="task_comm">Commentaries</textarea><br>
             <input type="submit" id="createbtn" value="Создать задачу">

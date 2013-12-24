@@ -17,9 +17,11 @@ if(isset($_POST['taskname']) && isset($_SESSION['autorised'])) {
         $tasks_count += 1;
         $query = 'SELECT user_id FROM `users` WHERE user_name="'.$task_user.'"';
         $res = mysqli_query($db_connect,$query) or die("MySQLi error: ".mysqli_error($db_connect));
-        if(!is_null($res)) {
+        if(mysqli_num_rows($res) != 0) {
             $task_uid = mysqli_fetch_array($res)[0];
+            echo "<br> Task_uid = ".$task_user;
         $query = 'INSERT INTO `tasks` VALUES(NULL,"'.$task_name.'","'.$_SESSION["user_id"].'",'.$task_uid.',4,NOW(),"'.$start_date.'","'.$end_date.'","'.$task_comm.'")';
+
             $res = mysqli_query($db_connect,$query) or die("MySQLi error: ".mysqli_error($db_connect));
             echo 'Task added successfully';
             echo '<meta http-equiv="refresh" content="0;URL=/tasks.php">';
@@ -28,7 +30,7 @@ if(isset($_POST['taskname']) && isset($_SESSION['autorised'])) {
 
         else {
             echo 'User not found!';
-            echo '<meta http-equiv="refresh" content="0;URL=/tasks.php"';
+            echo '<meta http-equiv="refresh" content="0;URL=/tasks.php">';
             exit;
         }
 
