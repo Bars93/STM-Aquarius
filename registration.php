@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>СУЗ Aquarius</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/common.css"> 
-	<link rel="stylesheet" type="text/css" href="css/reg.css">
-	<!-- <link rel="stylesheet" type="text/css" href=""> -->
-	<!-- Enabling HTML5 support for Internet Explorer -->
-  <!--[if lt IE 9]>
-   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-   <![endif]-->
-   <!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
+    <title>СУЗ Aquarius</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/reg.css">
+    <!-- <link rel="stylesheet" type="text/css" href=""> -->
+    <!-- Enabling HTML5 support for Internet Explorer -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
     <script type="text/javascript" src="js/jquery.nickvalid.js"></script>
@@ -26,7 +26,7 @@
 </head>
 <body>
 <header>
-	<!--<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>-->
+    <!--<iframe src="header.html" scrolling="no" class="pagehdr"></iframe>-->
     <div class="hdr_block">
         <?php
         include_once 'header.php';
@@ -35,21 +35,21 @@
 </header>
 
 <nav>
-	<!--<iframe class="menuif" src="nav.html" scrolling="no"></iframe>-->
+    <!--<iframe class="menuif" src="nav.html" scrolling="no"></iframe>-->
     <div class="nav_block">
         <?php
-            include_once 'nav.php';
+        include_once 'nav.php';
         ?>
     </div>
 </nav>
 <section class="bodysec">
-	<article>
-		<h1>Регистрация</h1>
+    <article>
+        <h1>Регистрация</h1>
         <?php
-            if(!(@session_start()))
-                echo 'Error with session working';
-        if(!@isset($_SESSION['autorised'])) {
-		echo '<form class="regform" id="regform" method="POST" action="reguser.php">
+        if (!(@session_start()))
+            echo 'Error with session working';
+        if (!@isset($_SESSION['autorised'])) {
+            echo '<form class="regform" id="regform" method="POST" action="reguser.php">
 			<label for="login_name">Имя пользователя: </label><br>
 			<input type="text" accesskey="1" lang="ru" name="login_name" id="login_name" class="login_name" tabindex="1" onkeyup="valid()">
 			<div id="uname_err" class="error">Ник не должен быть длиннее 25 символов</div>
@@ -74,16 +74,15 @@
 	    });
 	    //-->
 		</script>';
-        }
-        else {
+        } else {
             echo '<div class="postreg">Вы уже зарегистрированны и авторизованны!</div>';
         }
         ?>
-	</article>
+    </article>
 </section>
 
 <footer>
-<!--<iframe class="footerif" src="footer.html" scrolling="no"></iframe>-->
+    <!--<iframe class="footerif" src="footer.html" scrolling="no"></iframe>-->
     <div class="footer_block">
         <?php
         include_once 'footer.php';

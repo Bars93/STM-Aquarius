@@ -78,3 +78,20 @@
 #login_block .logform .helpreg a {
     margin-right: 0px !important;
 }
+#einfo_cont {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    border-top: 1px dotted rgba(91,96,247,1);
+}
+#edit_info {
+    display: inline-block;
+    font-size: 8pt;
+    margin-right: 0px;
+    width: 40%;
+    overflow: hidden;
+    text-align: left;
+}

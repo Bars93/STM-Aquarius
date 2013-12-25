@@ -2,8 +2,8 @@
 <?php
 require_once 'inc/init.inc';
 @session_start();
-if(isset($_SESSION['autorised'])) {
-    echo '<meta http-equiv="refresh" content="0;URL=/settings.php?uid='.$_SESSION['user_id'].'">';
+if (isset($_SESSION['autorised'])) {
+    echo '<meta http-equiv="refresh" content="0;URL=/settings.php?uid=' . $_SESSION['user_id'] . '">';
 }
 ?>
 <html lang="ru">
@@ -43,13 +43,15 @@ if(isset($_SESSION['autorised'])) {
 <section class="bodysec">
     <article id="login_block">
         <h1>Вход в систему: </h1><br>
+
         <form class="logform" name="logform" action="login.php" method="POST">
             <input type="text" accesskey="1" tabindex="1" class="loginp" name="loginp" placeholder="username"><br>
             <input type="password" class="passinp" tabindex="2" name="passinp" placeholder="password"><br>
-            <input type="submit" class="logbtn" tabindex="3" name="logbtn" value="Вход" >
+            <input type="submit" class="logbtn" tabindex="3" name="logbtn" value="Вход">
+
             <div class="helpreg">Авторизуйтесь или <a href="registration.php">зарегистрируйтесь</a> в системе
                 <!--<a href="recovery.php">Напомнить пароль</a>//--></div>
-       </form>
+        </form>
     </article>
 </section>
 
