@@ -2,7 +2,7 @@
     jQuery.fn.validate = function () {
         var check = false;
         var valid = function () {
-            check = $("#login_name").nickvalid();
+            check = nickok;
             check = $("#login_email").emailvalid() && check;
             check = $("#login_pw").passwordvalid() && check;
             if (check) {
@@ -16,8 +16,15 @@
         };
         valid();
         $("#login_name").typing({
-            stop:function() {valid();},
-            delay: 400
+            start: function(event,$elem) {
+              nickok = false;
+                $("regbtn").attr("type","button");
+                $("regbtn").attr("onclick","alert('Пожалуйста, заполните все поля правильно!');")
+            },
+            stop:function(event,$elem) {
+                $elem.nickvalid();
+            },
+            delay: 700
         });
         $("#login_email").keyup(function () {
             valid();

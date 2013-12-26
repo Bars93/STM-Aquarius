@@ -2,6 +2,9 @@
 <?php
 require_once 'inc/init.inc';
 @session_start();
+if(isset($_GET['id'])) {
+    $user_id = intval($_GET['id']);
+}
 ?>
 <html lang="ru">
 <head>
@@ -20,6 +23,8 @@ require_once 'inc/init.inc';
         }
     </style>
     <![endif]-->
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.usersettings.js"></script>
 </head>
 
 <body>
@@ -38,9 +43,55 @@ require_once 'inc/init.inc';
     </div>
 </nav>
 <section class="bodysec">
+    <article id="showuser">
+        <h1>Профиль пользователя</h1>
+        <table class="userinfo">
+            <thead>
+            <tr>
+                <th colspan="2">
+                <div class="nickname">
+                    irbis
+                </div>
+                <div class="fullname">
+                    Попов Даниил
+                </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="avatar">
+                    <img src="img/default.png">
+                </td>
+                <td>
+                     <div class="headinfo">
+                         E-mail
+                     </div>
+                     <div class="info">
+                         dan93irbis@mail.ru
+                     </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    etc.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
 
 </section>
-
+<?php
+echo'<script type="text/javascript">
+    <!--
+    $(document).ready(function() {
+        newpassok = false;
+        $(this).usersettings('.$user_id.');
+    });
+        //-->
+</script>';
+?>
 <footer>
     <div class="footer_block">
         <?php

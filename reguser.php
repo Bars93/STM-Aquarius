@@ -20,7 +20,7 @@ if (session_start() && isset($db_connect)) {
                         $res = mysqli_query($db_connect, $query) or die('MySQLi error: ' . mysqli_error($db_connect));
                         $user_count = mysqli_fetch_array($res)[0];
                         echo 'Total count of users: ' . $user_count++ . '<br>';
-                        $query = "INSERT INTO " . USERSTABLE . " VALUES(NULL,'$user_nick','','$pass','$user_email',NOW(),'" . DEFAVATAR . "',5)";
+                        $query = "INSERT INTO " . USERSTABLE . " VALUES(NULL,'$user_nick',NULL,'$pass','$user_email',NOW(),'" . DEFAVATAR . "',5)";
 
                         $res = mysqli_query($db_connect, $query) or die('MySQLi error: ' . mysqli_error($db_connect));
                         $ok = true;
@@ -28,7 +28,7 @@ if (session_start() && isset($db_connect)) {
                         $_SESSION['user_name'] = $user_nick;
                         $_SESSION['access_ip'] = $_SERVER['REMOTE_ADDR'];
                         $_SESSION['autorised'] = 1;
-                        $_SESSION['taskscount'] = 0;
+                        $_SESSION['taskscount'] = 5;
                         unset($_SESSION['incorrect']);
                         echo 'New user is registered successfully. Autorefresh return you to tasks page or click <a href="/tasks.php">here</a> if autorefresh turned off<br>';
                         echo '<meta http-equiv="refresh" content="3;URL=/tasks.php">';

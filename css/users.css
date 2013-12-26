@@ -11,3 +11,51 @@
 .userstable td {
 	border: 0px;
 }
+.userinfo {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 60%;
+    border: 2px dotted rgba(91,96,247,1);
+}
+.userinfo thead th {
+    border-bottom: 1px dotted rgba(91,96,247,1);
+}
+.userinfo thead .nickname {
+    float: left;
+    width: auto;
+    min-width: 118px;
+    margin-right: 20px;
+    padding-right: 10px;
+}
+.userinfo .avatar {
+    width: 125px;
+    border-right: 1px dotted rgba(91,96,247,1);
+}
+.userinfo .avatar img {
+    border: 0px;
+    margin: 5px;
+}
+.userinfo .nickname {
+    border-right: 1px dotted rgba(91,96,247,1);
+}
+.userinfo td, .userinfo th {
+    padding: 3px;
+    padding-left: 5px;
+    vertical-align: top;
+}
+.userinfo th {
+    font-weight: bolder;
+    font-size: 16pt;
+}
+.userinfo tbody .headinfo {
+    font-style: italic;
+    font-size: 14pt;
+    float: none;
+    border-bottom:  1px dotted rgba(91,96,247,1);
+    width: auto;
+}
+.userinfo tbody .info {
+    float: none;
+    font-size: 10pt;
+}

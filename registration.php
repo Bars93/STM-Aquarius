@@ -70,6 +70,7 @@
 		<script type="text/javascript">
 		<!--
 	    $(document).ready(function() {
+	        nickok = false;
             $(this).validate();
 	    });
 	    //-->

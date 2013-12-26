@@ -102,7 +102,7 @@ require_once 'inc/init.inc';
             if (!$tasks_count) {
                 echo '<tr><td colspan="5">В настоящее время задач нет</td></tr>';
             } else {
-                $query = "SELECT * FROM `tasks` WHERE stop_time IS NULL OR stop_time = 0 ORDER BY task_id LIMIT $lim_start,$tasks_per_page";
+                $query = "SELECT * FROM `tasks` WHERE stop_time IS NULL OR stop_time = 0 ORDER BY create_time LIMIT $lim_start,$tasks_per_page";
                 $res = mysqli_query($db_connect, $query) or die('MySQL access error: ' . mysqli_error($db_connect));
                 while ($resar = mysqli_fetch_assoc($res)) {
                     $query = "SELECT user_id,user_name FROM `users` WHERE user_id='" . $resar['author_id'] . "'";
