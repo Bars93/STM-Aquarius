@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <?php
 require_once 'inc/init.inc';
-@session_start();
+session_start();
 if(isset($_GET['id'])) {
     $user_id = intval($_GET['id']);
+}
+else if(isset($_SESSION['autorised'])) {
+	$user_id = intval($_SESSION['user_id']);
+}
+else {
+	$user_id = -1;
 }
 ?>
 <html lang="ru">
