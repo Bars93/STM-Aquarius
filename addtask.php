@@ -10,8 +10,8 @@ if (isset($_POST['taskname']) && isset($_SESSION['autorised'])) {
     if(preg_match('#\d{2}.\d{2}.\d{4}#',$start_date) && preg_match('#\d{2}.\d{2}.\d{4}#',$end_date)) {
         $st_ar = explode('.',$start_date);
         $et_ar = explode('.',$end_date);
-        $time_comp = date('Y-m-d',mktime(0,0,0,$st_ar[1],$st_ar[0],$st_ar[1],1)) <= date('Y-m-d',mktime(0,0,0,$et_ar[1],$et_ar[0],$et_ar[1],1));
-        echo ' '.date('Y-m-d',mktime(0,0,0,$st_ar[1],$st_ar[0],$st_ar[1],1)).' <= '.date('Y-m-d',mktime(0,0,0,$et_ar[1],$et_ar[0],$et_ar[1],1)).'<br>';
+        $time_comp = date('Y-m-d',mktime(0,0,0,$st_ar[1],$st_ar[0],$st_ar[2],1)) <= date('Y-m-d',mktime(0,0,0,$et_ar[1],$et_ar[0],$et_ar[2],1));
+        echo ' '.date('Y-m-d',mktime(0,0,0,$st_ar[1],$st_ar[0],$st_ar[2],1)).' <= '.date('Y-m-d',mktime(0,0,0,$et_ar[1],$et_ar[0],$et_ar[2],1)).'<br>';
         if($time_comp) {
             $start_date = preg_replace('#(\d{2}).(\d{2}).(\d{4})#', '$3-$2-$1', $start_date);
             $end_date = preg_replace('#(\d{2}).(\d{2}).(\d{4})#', '$3-$2-$1', $end_date);

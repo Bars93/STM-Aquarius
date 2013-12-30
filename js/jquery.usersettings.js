@@ -32,19 +32,16 @@
                             }
                         ).get();
                         userdata = userdata[0];
-                        var expdata = 'User_id = ' + userdata.user_id + '<br> user_name = ' + userdata.user_name;
-                        expdata = expdata + '<br> Full name = ' + userdata.full_name + '<br> user e-mail = ' + userdata.e_mail;
-                        $("#showuser").after("<article id=\"edituser\">"+ expdata+"</article>");
-                        $("#showuser").remove();
+                        var eu_art = document.createElement("article");
+                        eu_art.className = "edituser";
+                        eu_art.innerHTML = '<div class="eu_form"><label for="eu_uname">Имя пользователя</label><input type="text" class="eu_uname" value="'+ userdata.user_name+'"></div>';
+                        $(eu_art).insertAfter("#showuser");
                     }
                     else {
                         $("#error").innerHTML = "";
                         $(err).appendTo("#error");
                         $("#error").attr("visibility", "visible");
                     }
-                },
-                function() {
-                    window.alert("ajax failed!")
                 }
             );
         };
