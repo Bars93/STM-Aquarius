@@ -80,7 +80,10 @@ else {
             </tr>
             <tr>
                 <td>
-                    etc.
+
+                </td>
+                <td>
+                    <input type="button" class="editbtn" value="Редактировать" id="editbtn">
                 </td>
             </tr>
             </tbody>
@@ -93,7 +96,7 @@ echo'<script type="text/javascript">
     <!--
     $(document).ready(function() {
         newpassok = false;
-        $(this).usersettings('.$user_id.');
+        $("#editbtn").usersettings('.$user_id.');
     });
         //-->
 </script>';

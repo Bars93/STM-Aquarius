@@ -14,7 +14,7 @@ if (@session_start()) {
             $_SESSION['autorised'] = 1;
             unset($_SESSION['incorrect']);
             echo '<meta http-equiv="refresh" content="0;URL=' . $_SERVER['HTTP_REFERER'] . '">';
-            $_SESSION['tasks_count'] = 5;
+            $_SESSION['tasks_count'] = intval($data['rows_per_page']);
             exit;
         } else {
             $_SESSION['incorrect'] = 1;
