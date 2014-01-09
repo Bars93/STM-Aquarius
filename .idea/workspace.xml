@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b565e977-1fb5-46e4-b460-046b66257efd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.us_valid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.usersettings.js" afterPath="$PROJECT_DIR$/js/jquery.usersettings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.php" afterPath="$PROJECT_DIR$/settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/users.css" afterPath="$PROJECT_DIR$/css/users.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.us_valid.js" afterPath="$PROJECT_DIR$/js/jquery.us_valid.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="STM-Aquarius.iws" />
@@ -33,10 +29,10 @@
       <file leaf-file-name="settings.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="64" selection-start="457" selection-end="457" vertical-scroll-proportion="42.26923" vertical-offset="1422" max-vertical-offset="1989">
+            <state line="25" column="27" selection-start="684" selection-end="684" vertical-scroll-proportion="9.807693" vertical-offset="680" max-vertical-offset="1989">
               <folding>
-                <marker date="1388952800837" expanded="true" signature="683:752" placeholder="..." />
-                <marker date="1388952800837" expanded="true" signature="703:740" placeholder="{...}" />
+                <marker date="1389233625040" expanded="true" signature="683:752" placeholder="..." />
+                <marker date="1389233625040" expanded="true" signature="703:740" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -45,45 +41,25 @@
       <file leaf-file-name="jquery.usersettings.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/jquery.usersettings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="48" selection-start="3107" selection-end="3107" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1207">
+            <state line="12" column="43" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="626" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.us_valid.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jquery.us_valid.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/jquery.us_valid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-              <folding>
-                <element signature="e#0#40#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="etc.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/etc.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="16" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1734">
+            <state line="4" column="10" selection-start="102" selection-end="102" vertical-scroll-proportion="0.11447811" vertical-offset="0" max-vertical-offset="594">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reg.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/reg.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="9" selection-start="137" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.nickvalid.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jquery.nickvalid.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/jquery.nickvalid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="30" selection-start="734" selection-end="747" vertical-scroll-proportion="0.51241136" vertical-offset="0" max-vertical-offset="850">
+            <state line="26" column="9" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
@@ -92,16 +68,7 @@
       <file leaf-file-name="users.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/users.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="1" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1343">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reguser.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reguser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="82" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1071">
+            <state line="73" column="1" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.0" vertical-offset="749" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -157,17 +124,17 @@
         <option value="$PROJECT_DIR$/css/settings.css" />
         <option value="$PROJECT_DIR$/css/users.css" />
         <option value="$PROJECT_DIR$/js/jquery.usersettings.js" />
-        <option value="$PROJECT_DIR$/js/jquery.us_valid.js" />
         <option value="$PROJECT_DIR$/js/jquery.nickvalid.js" />
+        <option value="$PROJECT_DIR$/js/jquery.us_valid.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="php_5.4" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="244" />
-    <option name="y" value="229" />
+    <option name="x" value="-8" />
+    <option name="y" value="22" />
     <option name="width" value="1382" />
-    <option name="height" value="746" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -214,7 +181,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,68 +199,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM-Aquarius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM-Aquarius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM-Aquarius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM-Aquarius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM-Aquarius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM-Aquarius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM-Aquarius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM-Aquarius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -383,8 +290,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="244" y="229" width="1382" height="746" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -462,23 +369,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/registration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="12" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0" vertical-offset="1064" max-vertical-offset="1683">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reguser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="82" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/etc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="16" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1734">
-          <folding />
-        </state>
+        <state line="72" column="12" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0" vertical-offset="1064" max-vertical-offset="1683" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/reg.css">
@@ -490,48 +381,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getuserdata.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="300" selection-end="300" vertical-scroll-proportion="0.2802198" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
+        <state line="9" column="41" selection-start="300" selection-end="300" vertical-scroll-proportion="0.2802198" vertical-offset="0" max-vertical-offset="748" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="58" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.47971782" vertical-offset="0" max-vertical-offset="646">
+        <state line="16" column="58" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.47971782" vertical-offset="0" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.nickvalid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="9" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reguser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="82" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.5730337" vertical-offset="255" max-vertical-offset="1071">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/users.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="1" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1343">
+        <state line="73" column="1" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="64" selection-start="457" selection-end="457" vertical-scroll-proportion="42.26923" vertical-offset="1422" max-vertical-offset="1989">
+        <state line="25" column="27" selection-start="684" selection-end="684" vertical-scroll-proportion="9.807693" vertical-offset="680" max-vertical-offset="1989">
           <folding>
-            <marker date="1388952800837" expanded="true" signature="683:752" placeholder="..." />
-            <marker date="1388952800837" expanded="true" signature="703:740" placeholder="{...}" />
+            <marker date="1389233625040" expanded="true" signature="683:752" placeholder="..." />
+            <marker date="1389233625040" expanded="true" signature="703:740" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.usersettings.js">
+    <entry file="file://$PROJECT_DIR$/css/etc.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="48" selection-start="3107" selection-end="3107" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1207">
+        <state line="91" column="16" selection-start="1902" selection-end="1902" vertical-scroll-proportion="1.6784512" vertical-offset="550" max-vertical-offset="1734">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.us_valid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -549,9 +441,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.nickvalid.js">
+    <entry file="file://$PROJECT_DIR$/js/jquery.usersettings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="734" selection-end="747" vertical-scroll-proportion="0.51241136" vertical-offset="0" max-vertical-offset="850">
+        <state line="12" column="43" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="647" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.us_valid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="10" selection-start="102" selection-end="102" vertical-scroll-proportion="0.11447811" vertical-offset="0" max-vertical-offset="594">
           <folding />
         </state>
       </provider>
