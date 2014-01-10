@@ -19,8 +19,9 @@ if(isset($_SESSION['autorised'])) {
             $query = $query.' WHERE user_id='.$id;
             $res = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($db_connect));
             echo '  correct';
-            if(strcmp($name,$_SESSION['user_name']))
-                $_SESSION['user_name'] = $name;
+            $_SESSION['user_name'] = $name;
+            $_SESSION['user_full_name'] = $fullname;
+            $_SESSION['tasks_count'] = $row_per_page;
         }
         else {
             echo 'email format is wrong';

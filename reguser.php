@@ -27,6 +27,7 @@ if (session_start()) {
                         $_SESSION['user_id'] = $user_count;
                         $_SESSION['user_name'] = $user_nick;
                         $_SESSION['access_ip'] = $_SERVER['REMOTE_ADDR'];
+                        $_SESSION['user_full_name'] = '';
                         $_SESSION['autorised'] = 1;
                         $_SESSION['taskscount'] = 5;
                         unset($_SESSION['incorrect']);

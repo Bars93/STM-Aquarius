@@ -42,7 +42,14 @@
                             '<br><label for="eu_fullname">Полное имя</label><br><input type="text" class="eu_fullname" id="eu_fullname" value="'+ userdata.full_name +'"><br>' +
                             '<label for="eu_email">E-mail</label><br><input type="text" class="eu_email" id="eu_email" value="'+userdata.e_mail+'"><br>' +
                             '<!--<img src="'+userdata.avatar+'" id="eu_avatar_old"><input type="image" class="eu_avatar" id="eu_avatar"><br>-->' +
-                            '<label for="row_count">Количество задач на странице</label><br><select id="row_count"><option value="1">1</option><option value="5">5</option><option value="10">10</option></select>'+
+                            '<label for="row_count">Количество задач на странице</label><br><select id="row_count">' +
+                            '<option value="1">1</option>' +
+                            '<option value="3">3</option>' +
+                            '<option value="5">5</option>' +
+                            '<option value="7">7</option>' +
+                            '<option value="10">10</option>' +
+                            '<option value="15">15</option>' +
+                            '<option value="20">20</option></select>'+
                             '<br><input type="button" value="Отправить!" id="sendbtn"></div>';
                         $(eu_art).insertAfter("#showuser");
                         $("#editbtn").css("visibility","hidden");

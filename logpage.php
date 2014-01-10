@@ -49,7 +49,7 @@ if (isset($_SESSION['autorised'])) {
             <input type="password" class="passinp" tabindex="2" name="passinp" placeholder="password"><br>
             <input type="submit" class="logbtn" tabindex="3" name="logbtn" value="Вход">
 
-            <div class="helpreg">Авторизуйтесь или <a href="registration.php">зарегистрируйтесь</a> в системе
+            <div>Авторизуйтесь или <a href="registration.php">зарегистрируйтесь</a> в системе
                 <!--<a href="recovery.php">Напомнить пароль</a>//--></div>
         </form>
     </article>

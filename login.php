@@ -10,11 +10,12 @@ if (@session_start()) {
             $_SESSION['user_id']
                 = $data['user_id'];
             $_SESSION['user_name'] = $data['user_name'];
+            $_SESSION['user_full_name'] = $data['user_full_name'];
             $_SESSION['access_ip'] = $_SERVER['REMOTE_ADDR'];
             $_SESSION['autorised'] = 1;
+            $_SESSION['tasks_count'] = intval($data['rows_per_page']);
             unset($_SESSION['incorrect']);
             echo '<meta http-equiv="refresh" content="0;URL=' . $_SERVER['HTTP_REFERER'] . '">';
-            $_SESSION['tasks_count'] = intval($data['rows_per_page']);
             exit;
         } else {
             $_SESSION['incorrect'] = 1;

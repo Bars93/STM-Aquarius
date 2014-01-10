@@ -62,7 +62,7 @@
                                 $(su_art).insertAfter("#edituser");
                                 $("#edituser").remove();
                                 $(eui_art).insertAfter("#showuser");
-                                document.getElementsByClassName('login_nick')[0].innerHTML = uname;
+                                document.getElementsByClassName('login_nick')[0].innerHTML = udata.user_name+ '(' + udata.full_name + ')';
                                 $("#editbtn").usersettings(udata.user_id);
                             });
                     }
