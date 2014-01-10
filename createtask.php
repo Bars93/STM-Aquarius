@@ -58,8 +58,8 @@ require_once 'inc/init.inc';
             <label for="datetask">Сроки задачи: </label>
 
             <div id="daterange">
-                <input type="date" id="startdatetask" class="datetask" name="startdatetask" placeholder="Start date">
-                <input type="date" id="enddatetask" class="datetask" name="enddatetask" placeholder="End date">
+                <input type="text" id="startdatetask" class="datetask" name="startdatetask" placeholder="Start date">
+                <input type="text" id="enddatetask" class="datetask" name="enddatetask" placeholder="End date">
             </div>
             <label for="task_prior">Приоритет</label>
             <input type="radio" value="1" name="task_prior" class="task_prior">1

@@ -33,7 +33,7 @@
 	<div class="helpreg"><a href="registration.php">Регистрация</a>
 	<!--<a href="recovery.php">Напомнить пароль</a>//--></div>';
                         } else {
-                            echo '<div class="login_nick">' . $_SESSION['user_name'] . ' ('.$_SESSION['user_full_name'].')</div> <input type="submit" value="Log off" class="logbtn">';
+                            echo '<div class="login_nick">' . $_SESSION['user_name'] . ' ('.$_SESSION['user_full_name'].')</div> <input type="submit" value="Выход" class="logbtn">';
                             $_SESSION['action'] = 'logout';
                         }
                     } else {

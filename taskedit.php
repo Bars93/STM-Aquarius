@@ -114,8 +114,8 @@ require_once 'inc/init.inc';
                             echo '<input disabled type="text" class="task_name" name="task_name" value="' . $task_info['task_name'] . '"><br>';
                             echo '<label for="datetask">Сроки задачи: </label>
             <div id="daterange">
-		<input type="date" disabled id="startdatetask" class="datetask" name="startdatetask" placeholder="Start date" value="' . preg_replace('#(\d{4})-(\d{2})-(\d{2})#', '$3.$2.$1', $task_info['start_time']) . '">';
-                            echo '<input type="date" disabled id="enddatetask" class="datetask" name="enddatetask" placeholder="End date" value="' . preg_replace('#(\d{4})-(\d{2})-(\d{2})#', '$3.$2.$1', $task_info['end_time']) . '">
+		<input type="text" disabled id="startdatetask" class="datetask" name="startdatetask" placeholder="Start date" value="' . preg_replace('#(\d{4})-(\d{2})-(\d{2})#', '$3.$2.$1', $task_info['start_time']) . '">';
+                            echo '<input type="text" disabled id="enddatetask" class="datetask" name="enddatetask" placeholder="End date" value="' . preg_replace('#(\d{4})-(\d{2})-(\d{2})#', '$3.$2.$1', $task_info['end_time']) . '">
             </div>
                 <label for="task_prior">Приоритет</label>';
                             for ($i = 1; $i <= 7; $i++) {
