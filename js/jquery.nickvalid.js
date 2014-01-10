@@ -16,6 +16,9 @@
                         }).get();
                         if(res[0].taken == "true") {
                             $("#login_name").css("background-image","url(img/err.png)");
+							$("#uname_err").css("visibility", "visible");
+							$("#uname_err").css("height", "40px");
+							document.getElementById('uname_err').innerHTML = 'К сожалению, ник уже занят!';
                             nickok = false;
 
                         }
@@ -29,8 +32,10 @@
             }
             else {
                 $(this).css("background-image", "url(img/err.png)");
-                $("#uname_err").css("visibility", "visible");
-                $("#uname_err").css("height", "40px");
+				$("#uname_err").css("visibility", "visible");
+				$("#uname_err").css("height", "40px");
+                document.getElementById('uname_err').innerHTML = 'Слишком длинный ник!';
+				nickok = false;
                 res = false;
             }
         }

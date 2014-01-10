@@ -16,11 +16,17 @@
                         }).get();
                         if(res[0].taken == "true") {
                             $("#eu_uname").css("background-image","url(img/err.png)");
+							if($("#uname_err")) {
+							document.getElementById('uname_err').innerHTML = 'К сожалению, ник уже занят!';
+							$("#uname_err").css("visibility", "visible");
+							$("#uname_err").css("height", "40px");
+							}
                             nickok = false;
-
                         }
                         else {
                             $("#eu_uname").css("background-image","url(img/ok.png)");
+							$("#uname_err").css("visibility", "hidden");
+							$("#uname_err").css("height", "1px");
                             nickok = true;
 
                         }
@@ -30,9 +36,11 @@
             else {
                 $(this).css("background-image", "url(img/err.png)");
                 if($("#uname_err")) {
-                    $("#uname_err").css("visibility", "visible");
-                    $("#uname_err").css("height", "40px");
+                    document.getElementById('uname_err').innerHTML = 'Слишком длинный ник!';
+							$("#uname_err").css("visibility", "visible");
+							$("#uname_err").css("height", "40px");
                 }
+				nickok = false;
                 res = false;
             }
         }

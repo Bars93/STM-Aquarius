@@ -1,7 +1,7 @@
 <?php
 require_once 'inc/init.inc';
 define('DEFAVATAR', 'img/default.png');
-$user_nick = mysqli_real_escape_string($db_connect,$_POST['login_name']);
+$user_nick = strtolower(mysqli_real_escape_string($db_connect,$_POST['login_name']));
 $user_pw = mysqli_real_escape_string($db_connect,$_POST['login_pw']);
 $user_cpw = mysqli_real_escape_string($db_connect,$_POST['login_cpw']);
 $user_email = mysqli_real_escape_string($db_connect,$_POST['login_email']);

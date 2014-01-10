@@ -39,8 +39,10 @@
                         eu_art.innerHTML = '<h1>Редактирование пользователя</h1><div class="eu_form">' +
                             '<input type="hidden" value="'+ userdata.user_id + '" id="eu_uid"><label for="eu_uname">Имя пользователя</label><br>' +
                             '<input type="text" class="eu_uname" id="eu_uname" value="'+ userdata.user_name+'">' +
+							'<div id="uname_err" class="error">Ник не должен быть длиннее 25 символов</div>'+
                             '<br><label for="eu_fullname">Полное имя</label><br><input type="text" class="eu_fullname" id="eu_fullname" value="'+ userdata.full_name +'"><br>' +
                             '<label for="eu_email">E-mail</label><br><input type="text" class="eu_email" id="eu_email" value="'+userdata.e_mail+'"><br>' +
+							'<div id="uemail_err" class="error">Введите e-mail правильно, например \'asm@mail.ru\'</div><br>' +
                             '<!--<img src="'+userdata.avatar+'" id="eu_avatar_old"><input type="image" class="eu_avatar" id="eu_avatar"><br>-->' +
                             '<label for="row_count">Количество задач на странице</label><br><select id="row_count">' +
                             '<option value="1">1</option>' +

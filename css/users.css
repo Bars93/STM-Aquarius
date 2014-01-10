@@ -88,15 +88,27 @@
 article.eu_info {
     min-height: 20px !important;
 }
-.eu_info > .error {
+.eu_info > .errormsg {
     display: inline-block;
     color: red;
     font-size: 12pt;
     text-align: center;
 }
-.eu_info > .success {
+.eu_info > .successmsg {
     display: inline-block;
     color: green;
     font-size: 12pt;
     text-align: center;
+}
+.error {
+	background: #ffdab9;
+	border: 2.5px solid darkred;
+	border-radius: 5px 5px;
+	width: 60%;
+	display: inline-block;
+	float: none;
+	overflow: hidden;
+	padding: 1px;
+	height: 1px;
+	visibility: hidden;
 }

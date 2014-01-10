@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Даниил
- * Date: 10.01.14
- * Time: 15:16
- */
 require_once 'inc/init.inc';
 @session_start();
 if(isset($_SESSION['autorised'])) {
@@ -15,11 +9,11 @@ if(isset($_SESSION['autorised'])) {
     $row_per_page = mysqli_real_escape_string($db_connect,$_POST['rpp']);
     if(mb_strlen($name) <= 25) {
         if (preg_match('.@.', $mail)) {
-            $query = 'UPDATE users SET user_name="'.$name.'", user_full_name="'.$fullname.'", email="'.$mail.'", rows_per_page='.$row_per_page;
+            $query = 'UPDATE users SET user_name="'.strtolower($name).'", user_full_name="'.$fullname.'", email="'.$mail.'", rows_per_page='.$row_per_page;
             $query = $query.' WHERE user_id='.$id;
             $res = mysqli_query($db_connect,$query) or die('MySQLi error: '.mysqli_error($db_connect));
             echo '  correct';
-            $_SESSION['user_name'] = $name;
+            $_SESSION['user_name'] = strtolower($name);
             $_SESSION['user_full_name'] = $fullname;
             $_SESSION['tasks_count'] = $row_per_page;
         }

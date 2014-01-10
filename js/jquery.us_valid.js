@@ -21,7 +21,7 @@
                     eui_art.className = 'eu_info'
                     eui_art.id = 'eu_info';
                     if(resp.indexOf("correct") == -1) {
-                        eui_art.innerHTML = "<div class='error'>Ошибка при отправке данных: "+ resp + "</div>"
+                        eui_art.innerHTML = "<div class='errormsg'>Ошибка при отправке данных: "+ resp + "</div>"
 
                         $(eui_art).insertAfter("#edituser");
                     }
@@ -58,7 +58,7 @@
                                     ' </div></td></tr><tr><td><small>' + udata.regdate + '</small></td><td>' +
                                     '<input type="button" class="editbtn" value="Редактировать" id="editbtn">' +
                                     '</td></tr></tbody></table>';
-                                eui_art.innerHTML = "<div class='success'>Данные успешно сохранены!</div>";
+                                eui_art.innerHTML = "<div class='successmsg'>Данные успешно сохранены!</div>";
                                 $(su_art).insertAfter("#edituser");
                                 $("#edituser").remove();
                                 $(eui_art).insertAfter("#showuser");

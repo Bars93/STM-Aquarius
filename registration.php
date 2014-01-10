@@ -52,7 +52,7 @@
             echo '<form class="regform" id="regform" method="POST" action="reguser.php">
 			<label for="login_name">Имя пользователя: </label><br>
 			<input type="text" accesskey="1" lang="ru" name="login_name" id="login_name" class="login_name" tabindex="1" onkeyup="valid()">
-			<div id="uname_err" class="error">Ник не должен быть длиннее 25 символов</div>
+			<div id="uname_err" class="error">Ник не должен быть длиннее 25 символов</div><br>
 			<label for="login_email">E-mail: </label><br>
 			<input type="text" lang="ru" name="login_email" id="login_email" class="login_email" tabindex="2">
 			<div id="uemail_err" class="error">Введите e-mail правильно, например \'asm@mail.ru\'</div>
