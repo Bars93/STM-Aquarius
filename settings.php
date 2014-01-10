@@ -30,7 +30,11 @@ else {
     </style>
     <![endif]-->
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.typing-0.2.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.usersettings.js"></script>
+    <script type="text/javascript" src="js/jquery.us_nickvalid.js"></script>
+    <script type="text/javascript" src="js/jquery.us_valid.js"></script>
+    <script type="text/javascript" src="js/jquery.emailvalid.js"></script>
 </head>
 
 <body>
@@ -50,16 +54,20 @@ else {
 </nav>
 <section class="bodysec">
     <article id="showuser">
-        <h1>Профиль пользователя</h1>
+        <?php
+        $query = 'SELECT user_name,user_full_name,email,img_path,regdate FROM users WHERE user_id='.$user_id;
+        $res = mysqli_query($db_connect,$query) or die("MySQLi error: ".mysqli_error($db_connect));
+        if((!is_null($res)) && $user_id != -1) {
+            $user_info = mysqli_fetch_array($res);
+        echo'<h1>Профиль пользователя</h1>
         <table class="userinfo">
             <thead>
             <tr>
                 <th colspan="2">
-                <div class="nickname">
-                    irbis
+                <div class="nickname">'.$user_info['user_name'].'
                 </div>
-                <div class="fullname">
-                    Попов Даниил
+                <div class="fullname">'
+                    .$user_info["user_full_name"].'
                 </div>
                 </th>
             </tr>
@@ -67,35 +75,39 @@ else {
             <tbody>
             <tr>
                 <td class="avatar">
-                    <img src="img/default.png">
+                    <img src="'.$user_info['img_path'].'">
                 </td>
                 <td>
                      <div class="headinfo">
-                         E-mail
-                     </div>
-                     <div class="info">
-                         dan93irbis@mail.ru
+                     E-mail
+                       </div>
+                     <div class="info">'.$user_info['email'].'
                      </div>
                 </td>
             </tr>
             <tr>
                 <td>
-
+                    <small>'.$user_info['regdate'].'</small>
                 </td>
-                <td>
-                    <input type="button" class="editbtn" value="Редактировать" id="editbtn">
-                </td>
+                <td>';
+            if(isset($_SESSION['autorised']) && $_SESSION['user_id']==$user_id)
+                    echo '<input type="button" class="editbtn" value="Редактировать" id="editbtn">';
+                echo '</td>
             </tr>
             </tbody>
-        </table>
+        </table>';
+        }
+        else {
+            echo '<div class="error">Такой пользователь не найден</div>';
+        }
+        ?>
     </article>
-
 </section>
 <?php
 echo'<script type="text/javascript">
     <!--
     $(document).ready(function() {
-        newpassok = false;
+        nickok = false;
         $("#editbtn").usersettings('.$user_id.');
     });
         //-->

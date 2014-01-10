@@ -1,12 +1,12 @@
 <?php
 require_once 'inc/init.inc';
 define('DEFAVATAR', 'img/default.png');
-$user_nick = $_POST['login_name'];
-$user_pw = $_POST['login_pw'];
-$user_cpw = $_POST['login_cpw'];
-$user_email = $_POST['login_email'];
+$user_nick = mysqli_real_escape_string($db_connect,$_POST['login_name']);
+$user_pw = mysqli_real_escape_string($db_connect,$_POST['login_pw']);
+$user_cpw = mysqli_real_escape_string($db_connect,$_POST['login_cpw']);
+$user_email = mysqli_real_escape_string($db_connect,$_POST['login_email']);
 
-if (session_start() && isset($db_connect)) {
+if (session_start()) {
     if (strlen($user_nick) <= 25) {
         if (preg_match('.@.', $user_email)) {
             if (preg_match('/(?!^[0-9]*$)(?!^[a-zA-Z!@#$%^&*()_+=<>?]*$)^([a-zA-Z!@#$%^&*()_+=<>?0-9]{6,})$/', $user_pw)) {

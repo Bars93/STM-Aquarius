@@ -72,3 +72,31 @@
     float: none;
     width: 50%;
 }
+.eu_form input[type="text"] {
+    width: 64%;
+    height: 30px;
+    font-size: 14pt;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    padding-right: 30px;
+    border: 1.5px solid rgba(91,96,247,1);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 25px;
+}
+article.eu_info {
+    min-height: 20px !important;
+}
+.eu_info > .error {
+    display: inline-block;
+    color: red;
+    font-size: 12pt;
+    text-align: center;
+}
+.eu_info > .success {
+    display: inline-block;
+    color: green;
+    font-size: 12pt;
+    text-align: center;
+}

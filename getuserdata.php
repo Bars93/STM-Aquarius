@@ -24,6 +24,7 @@ echo chr(60) . chr(63) . 'xml version="1.0" encoding="utf-8" ' . chr(63) . chr(6
                 echo '<e_mail>'.$userdata['email'].'</e_mail>';
                 echo '<avatar>'.$userdata['img_path'].'</avatar>';
                 echo '<rows>'.$userdata['rows_per_page'].'</rows>';
+                echo '<regdate>'.$userdata['regdate'].'</regdate>';
                 echo '</userinfo>';
                 echo '<error><text>no</text></error>';
             }

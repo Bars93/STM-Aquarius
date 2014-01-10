@@ -1,5 +1,5 @@
 (function ($) {
-    jQuery.fn.nickvalid = function () {
+    jQuery.fn.us_nickvalid = function () {
         var res = false;
         if ($(this).val() != "") {
             if ($(this).val().length <= 25) {
@@ -15,12 +15,12 @@
                             };
                         }).get();
                         if(res[0].taken == "true") {
-                            $("#login_name").css("background-image","url(img/err.png)");
+                            $("#eu_uname").css("background-image","url(img/err.png)");
                             nickok = false;
 
                         }
                         else {
-                            $("#login_name").css("background-image","url(img/ok.png)");
+                            $("#eu_uname").css("background-image","url(img/ok.png)");
                             nickok = true;
 
                         }
@@ -29,15 +29,19 @@
             }
             else {
                 $(this).css("background-image", "url(img/err.png)");
-                $("#uname_err").css("visibility", "visible");
-                $("#uname_err").css("height", "40px");
+                if($("#uname_err")) {
+                    $("#uname_err").css("visibility", "visible");
+                    $("#uname_err").css("height", "40px");
+                }
                 res = false;
             }
         }
         else {
             $(this).css("background-image", "none");
-            $("#uname_err").css("visibility", "hidden");
-            $("#uname_err").css("height", "1px");
+            if($("#uname_err")) {
+                $("#uname_err").css("visibility", "hidden");
+                $("#uname_err").css("height", "1px");
+            }
             res = false;
         }
         return res;
