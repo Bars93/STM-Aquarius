@@ -3,8 +3,10 @@ require_once 'inc/init.inc';
 session_start();
 if (isset($_POST['taskname']) && isset($_SESSION['autorised'])) {
     $task_name = mysqli_real_escape_string($db_connect, $_POST['taskname']);
+    $task_user = mysqli_real_escape_string($db_connect,$_POST['task_user']);
     $start_date = mysqli_real_escape_string($db_connect, $_POST['startdatetask']);
     $end_date = mysqli_real_escape_string($db_connect, $_POST['enddatetask']);
+    $task_comm = mysqli_real_escape_string($db_connect,$_POST['task_comm']);
     $edit_by_user = isset($_POST['edit_by_user']) ? TRUE : FALSE;
     $priority = isset($_POST['task_prior']) ? $_POST['task_prior'] : 4;
     if(preg_match('#\d{2}.\d{2}.\d{4}#',$start_date) && preg_match('#\d{2}.\d{2}.\d{4}#',$end_date)) {
